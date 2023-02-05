@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class MetodePembayaran extends Model
 {
     use HasFactory;
+
+		protected $guarded = ['id'];
+
+		public function transaksi_metodes()
+		{
+			$this->hasMany(Transaksi_Metode::class);
+		}
 }

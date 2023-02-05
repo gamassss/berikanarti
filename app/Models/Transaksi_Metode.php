@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Transaksi_Metode extends Model
 {
     use HasFactory;
+
+		public function transaksi()
+		{
+			$this->belongsTo(Transaksi::class);
+		}
+
+		public function metode()
+		{
+			$this->belongsTo(MetodePembayaran::class);
+		}
 }
